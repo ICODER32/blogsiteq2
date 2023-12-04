@@ -16,7 +16,6 @@ import image from "@/assets/bgImg.jpeg";
 export default function CardWithForm(props: {
   title: string;
   description: string;
-  image: string;
 }) {
   return (
     <Card className="w-[350px]">
@@ -24,8 +23,15 @@ export default function CardWithForm(props: {
         <CardTitle> {props.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <Image src={props.image} width={700} height={700} alt="Post Image" />
-        <CardDescription>dec</CardDescription>
+        <Image
+          src={
+            "https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?cs=srgb&dl=pexels-pixabay-159866.jpg&fm=jpg"
+          }
+          width={700}
+          height={700}
+          alt="Post Image"
+        />
+        <CardDescription>{props.description}</CardDescription>
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button>See More</Button>
